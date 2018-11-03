@@ -1,0 +1,32 @@
+html, body {
+font-family: Arial, sans-serif;
+height: 90%;
+margin: 0;
+padding: 0;
+background-color: #00FFFF;
+font-size: 1em;
+line-height: 1.4; }
+
+nav {
+margin-bottom: 15px; }
+
+.navbar-header {
+background-color: black;
+color: #ffffff;
+margin-top: -10px;
+margin-bottom: 10px; }
+
+.flash {
+background-color: #00FFFF;
+width:100%;
+text-decoration: none; }
+
+.flash li {
+list-style-type: none;
+text-align: center; }
+
+.catalog_logo_img {
+height: 30px; width: 30px; margin-top:0px; }
+
+.div-bcolor {
+background-color: lightgray; }

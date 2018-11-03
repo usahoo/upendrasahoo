@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+                <div class="col-sm-4">
+                    <span><strong>Categories</strong><span><br>
+                    {% for category in categories %}
+                        <span>
+                            <a href="{{url_for('showCategory', category_name = category.name)}}">
+                                {{category.name}}
+                            </a>
+                        </span><br>
+                    {% endfor %}
+                </div>
+            <div class="col-sm-8">
+            {% if items.count() > 1 %}
+                <span><strong>{{selectedCategory.name}} Items ({{ items.count() }} items)</strong><span><br>
+            {%  else %}
+                 <span><strong>{{selectedCategory.name}} Items ({{ items.count() }} item)</strong><span><br>
+              {% endif
+            %}
+                {% for item in items %}
+                    <span>
+                        <a href="{{url_for('showItem', category_name = item.category.name, item_name = item.name)}}">{{item.name}}</a>
+                    </span><br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
